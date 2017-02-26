@@ -9,11 +9,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Informacion</title>
+        <title>JSP Page</title>
     </head>
     <body>
-        <h1>Bienvenido
-            <br> ${correo}
-            <br> ${contrasena}</h1>
+        <h1>
+            <br>
+            ${email}
+            <br><br>
+            ${pwd}
+        </h1>
     </body>
 </html>
