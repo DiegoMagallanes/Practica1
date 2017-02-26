@@ -13,11 +13,13 @@
     </head>
     <body>
         <h1>Se registro a:</h1>
+        <form action="." oninput="range_control_value.value = range_control.valueAsNumber">
         <h2><br>${nombre1}
             <br>${carrera1}
-            <br>${date1}
+            <br>${cumpleanios}
             <br>${email1}
             <br>${password1}
+            </form>
         </h2>
     </body>
 </html>

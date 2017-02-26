@@ -13,10 +13,9 @@
         <title>Registro</title>
     </head>
     <body>
-       
-        <form action="." oninput="range_control_value.value = range_control.valueAsNumber">
         <h1>Registro</h1>
         <form method="submit" action="/Clase1/persona1?">
+            <form action="." oninput="range_control_value.value = range_control.valueAsNumber"/>
             <input id="name" name="nombre1" type="text" placeholder="Nombre"/>
             <br>
             <input id="carrera" name="carrera1" type="text" placeholder="Carrera"/>
