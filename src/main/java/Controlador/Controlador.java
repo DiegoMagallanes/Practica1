@@ -36,16 +36,16 @@ public class Controlador {
     
     
     
-    @RequestMapping(value="/persona1?", method = RequestMethod.GET)
+    @RequestMapping(value="/persona1", method = RequestMethod.GET)
     public ModelAndView persona1(ModelMap model,HttpServletRequest request){
         String p = request.getParameter("nombre1");
         String c = request.getParameter("carrera1");
-        String d = request.getParameter("date1");
+        String d = request.getParameter("cumpleanios");
         String e = request.getParameter("email1");
         String pas = request.getParameter("password1");
         model.addAttribute("nombre1", p);
         model.addAttribute("carrera1", c);
-        model.addAttribute("date1", d);
+        model.addAttribute("cumpleanios",d);
         model.addAttribute("email1", e);
         model.addAttribute("password1", pas);
         return new ModelAndView("registro_completo",model);
