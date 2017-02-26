@@ -24,40 +24,39 @@ public class Controlador {
         return "inicio";
     }
     
-    @RequestMapping(value="/persona2", method = RequestMethod.POST)
-    public ModelAndView persona2(ModelMap model,HttpServletRequest request){
-        String corr = request.getParameter("nombre2");
-        String cont = request.getParameter("nombre3");
-        model.addAttribute("correo", corr);
-        model.addAttribute("contrasena", cont);
+    @RequestMapping(value="/verInfo", method = RequestMethod.POST)
+    public ModelAndView verInfo(ModelMap model,HttpServletRequest request){
+        String email = request.getParameter("email");
+        String pwd = request.getParameter("pwd");
+        model.addAttribute("email", email);
+        model.addAttribute("pwd", pwd);
+        
         return new ModelAndView("persona",model);
     
     }
     
-    
-    
-    @RequestMapping(value="/persona1", method = RequestMethod.GET)
-    public ModelAndView persona1(ModelMap model,HttpServletRequest request){
-        String p = request.getParameter("nombre1");
-        String c = request.getParameter("carrera1");
-        String d = request.getParameter("cumpleanios");
-        String e = request.getParameter("email1");
-        String pas = request.getParameter("password1");
-        model.addAttribute("nombre1", p);
-        model.addAttribute("carrera1", c);
-        model.addAttribute("cumpleanios",d);
-        model.addAttribute("email1", e);
-        model.addAttribute("password1", pas);
-        return new ModelAndView("registro_completo",model);
-    
-    }
-    
-    
-    @RequestMapping(value="/registro1", method = RequestMethod.GET)
-    public ModelAndView registro1(ModelMap model,HttpServletRequest request){
+    @RequestMapping(value="/datosRegistro", method = RequestMethod.POST)
+    public ModelAndView datosRegistro(ModelMap model,HttpServletRequest request){
+        String name = request.getParameter("name");
+        String carreer = request.getParameter("carreer");
+        String days = request.getParameter("days");
+        String months = request.getParameter("months");
+        String years = request.getParameter("years");
+        String email = request.getParameter("email");
+        String password = request.getParameter("password");
+        model.addAttribute("name", name);
+        model.addAttribute("carreer", carreer);
+        model.addAttribute("days", days);
+        model.addAttribute("months", months);
+        model.addAttribute("years", years);
+        model.addAttribute("email", email);
+        model.addAttribute("password", password);
+        
         return new ModelAndView("registro",model);
-    
     }
     
-    
+    @RequestMapping(value="/registrar", method = RequestMethod.GET)
+    public ModelAndView registrar(ModelMap model,HttpServletRequest request){
+        return new ModelAndView("registrar",model);
+    }
 }
